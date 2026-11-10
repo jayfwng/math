@@ -1,6 +1,6 @@
 // 서비스 워커: 한 번 열어 본 화면은 인터넷이 없어도 열려요. (네트워크 우선 → 실패하면 저장본)
 const CACHE = 'math-v3';
-const CORE = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/engine.js', 'js/store.js', 'js/tex.js', 'js/rng.js', 'js/lib.js', 'js/fig.js', 'content/index.js', 'content/map.js', 'content/m1-a.js', 'content/m1-b.js', 'content/m1-c.js', 'content/m1-d.js', 'content/m2-a.js', 'content/m2-b.js', 'content/m3-a.js', 'content/m3-b.js', 'content/h1-a.js', 'manifest.webmanifest'];
+const CORE = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/engine.js', 'js/store.js', 'js/tex.js', 'js/rng.js', 'js/lib.js', 'js/fig.js', 'content/index.js', 'content/map.js', 'content/m1-a.js', 'content/m1-b.js', 'content/m1-c.js', 'content/m1-d.js', 'content/m2-a.js', 'content/m2-b.js', 'content/m3-a.js', 'content/m3-b.js', 'content/h1-b.js', 'content/h1-a.js', 'manifest.webmanifest'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE).catch(() => { })).then(() => self.skipWaiting()));
