@@ -141,6 +141,7 @@ function conv(s) {
         return { ml: `<mtext>${esc(t)}</mtext>` };
       }
       case 'left': case 'right': { if (s[i] === '.') i++; return { ml: '' }; }
+      case 'displaystyle': case 'textstyle': case 'limits': return { ml: '' };
       case 'quad': return { ml: '<mspace width="1em"></mspace>' };
       case 'qquad': return { ml: '<mspace width="2em"></mspace>' };
       case 'sum': return { ml: '<mo>∑</mo>', limits: true };
