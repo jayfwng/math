@@ -15,7 +15,7 @@ const OPS = {
   therefore: '∴', because: '∵', angle: '∠', triangle: '△', parallel: '∥', perp: '⊥', circ: '∘',
   ldots: '…', cdots: '⋯', dots: '…', backsim: '∽', square: '□', bullet: '•', degree: '°', mid: '∣', setminus: '∖', supset: '⊃', subseteq: '⊆', supseteq: '⊇', neg: '∼', forall: '∀', exists: '∃', wedge: '∧', vee: '∨', leftarrow: '←', Leftarrow: '⇐', leftrightarrow: '↔', varnothing: '∅', nmid: '∤', ast: '∗', varepsilon: 'ε', epsilon: 'ε', lt: '<', gt: '>', nabla: '∇',
 };
-const FUNCS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'max', 'min', 'exp']);
+const FUNCS = new Set(['sin', 'cos', 'tan', 'sec', 'csc', 'cot', 'log', 'ln', 'max', 'min', 'exp', 'arcsin', 'arctan']);
 const HANGUL = /[ᄀ-ᇿ㄰-㆏가-힣]/;
 
 export const texErrors = [];
