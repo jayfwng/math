@@ -11,9 +11,9 @@ const GREEK = {
 const OPS = {
   times: '×', div: '÷', cdot: '·', pm: '±', mp: '∓', le: '≤', leq: '≤', ge: '≥', geq: '≥',
   ne: '≠', neq: '≠', approx: '≈', equiv: '≡', cong: '≅', sim: '∽', to: '→', rightarrow: '→',
-  Rightarrow: '⇒', Leftrightarrow: '⇔', in: '∈', notin: '∉', subset: '⊂', cup: '∪', cap: '∩',
+  Rightarrow: '⇒', Leftrightarrow: '⇔', iff: '⇔', implies: '⇒', in: '∈', notin: '∉', subset: '⊂', cup: '∪', cap: '∩',
   therefore: '∴', because: '∵', angle: '∠', triangle: '△', parallel: '∥', perp: '⊥', circ: '∘',
-  ldots: '…', cdots: '⋯', dots: '…', backsim: '∽', square: '□', bullet: '•', degree: '°', mid: '∣', setminus: '∖',
+  ldots: '…', cdots: '⋯', dots: '…', backsim: '∽', square: '□', bullet: '•', degree: '°', mid: '∣', setminus: '∖', supset: '⊃', subseteq: '⊆', supseteq: '⊇', neg: '∼', forall: '∀', exists: '∃', wedge: '∧', vee: '∨', leftarrow: '←', Leftarrow: '⇐', leftrightarrow: '↔', varnothing: '∅', nmid: '∤', ast: '∗', varepsilon: 'ε', epsilon: 'ε', lt: '<', gt: '>', nabla: '∇',
 };
 const FUNCS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'max', 'min', 'exp']);
 const HANGUL = /[ᄀ-ᇿ㄰-㆏가-힣]/;
