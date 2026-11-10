@@ -4,8 +4,9 @@ import m1a from './m1-a.js';
 import m1b from './m1-b.js';
 import m1c from './m1-c.js';
 import m1d from './m1-d.js';
+import m2a from './m2-a.js';
 
-const IMPL_LIST = [...m1a, ...m1b, ...m1c, ...m1d];
+const IMPL_LIST = [...m1a, ...m1b, ...m1c, ...m1d, ...m2a];
 
 export const IMPL = {};
 for (const c of IMPL_LIST) IMPL[c.id] = c;
