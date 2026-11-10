@@ -8,6 +8,7 @@ import m2a from './m2-a.js';
 import m2b from './m2-b.js';
 import m3a from './m3-a.js';
 import m3b from './m3-b.js';
+import g from './g.js';
 import c from './c.js';
 import p from './p.js';
 import h3 from './h3.js';
@@ -15,7 +16,7 @@ import h2 from './h2.js';
 import h1b from './h1-b.js';
 import h1a from './h1-a.js';
 
-const IMPL_LIST = [...m1a, ...m1b, ...m1c, ...m1d, ...m2a, ...m2b, ...m3a, ...m3b, ...h1a, ...h1b, ...h2, ...h3, ...p, ...c];
+const IMPL_LIST = [...m1a, ...m1b, ...m1c, ...m1d, ...m2a, ...m2b, ...m3a, ...m3b, ...h1a, ...h1b, ...h2, ...h3, ...p, ...c, ...g];
 
 export const IMPL = {};
 for (const c of IMPL_LIST) IMPL[c.id] = c;
