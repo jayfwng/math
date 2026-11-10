@@ -67,14 +67,14 @@ export function finalize(raw, R, lv) {
     const f = toFrac(raw.a);
     const useInput = raw.input === false ? false : lv >= (raw.inputLv ?? 4);
     const suf = raw.suf || '';
-    const shown = `$${fmtTex(f, raw.fmt, suf)}$${raw.unit ? ' ' + raw.unit : ''}`;
+    const shown = `$${fmtTex(f, raw.fmt, suf)}$${raw.unit ? (raw.unit === '°' ? '' : ' ') + raw.unit : ''}`;
     if (useInput) return { ...base, kind: 'num', expect: f, shown, suf };
     const wrongs = numDistractors(R, f, raw.wrong || [], raw.fmt);
     let opts = [f, ...wrongs];
     opts = raw.sortNum ? opts.sort((x, y) => x.n * y.d - y.n * x.d) : R.shuffle(opts);
     return {
       ...base, kind: 'mc', shown,
-      choices: opts.map((v) => `$${fmtTex(v, raw.fmt, suf)}$${raw.unit ? ' ' + raw.unit : ''}`),
+      choices: opts.map((v) => `$${fmtTex(v, raw.fmt, suf)}$${raw.unit ? (raw.unit === '°' ? '' : ' ') + raw.unit : ''}`),
       ans: opts.indexOf(f),
     };
   }
