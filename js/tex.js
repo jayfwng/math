@@ -13,7 +13,7 @@ const OPS = {
   ne: '≠', neq: '≠', approx: '≈', equiv: '≡', cong: '≅', sim: '∽', to: '→', rightarrow: '→',
   Rightarrow: '⇒', Leftrightarrow: '⇔', in: '∈', notin: '∉', subset: '⊂', cup: '∪', cap: '∩',
   therefore: '∴', because: '∵', angle: '∠', triangle: '△', parallel: '∥', perp: '⊥', circ: '∘',
-  ldots: '…', cdots: '⋯', square: '□', bullet: '•', degree: '°', mid: '∣', setminus: '∖',
+  ldots: '…', cdots: '⋯', dots: '…', backsim: '∽', square: '□', bullet: '•', degree: '°', mid: '∣', setminus: '∖',
 };
 const FUNCS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'max', 'min', 'exp']);
 const HANGUL = /[ᄀ-ᇿ㄰-㆏가-힣]/;
