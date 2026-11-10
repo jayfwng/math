@@ -1,13 +1,20 @@
-# 다시, 수학
+# 수학 다시 잡기
 
-중1부터 차근차근 다시 잡는 수학 학습 PWA. (개념 → 문제 → 오답 개념 → 리마인드 복습, 자동 레벨업)
+중1~고3 수학을 개념 설명 → 문제 풀이 → 오답 개념 복습 → 리마인드로 다시 쌓는 PWA예요.
+링크: https://jayfwng.github.io/math/ (아이폰 사파리 → 공유 → 홈 화면에 추가)
 
-## 사용
-- 배포: GitHub Pages (Settings → Pages → Deploy from branch → main / root)
-- 주소: https://jayfwng.github.io/math/
-- 아이폰: Safari로 열기 → 공유 → "홈 화면에 추가"
+## 기능
+- 개념 설명 카드 후 문제 풀이, 틀리면 해당 문제의 개념 카드를 바로 보여줌
+- 리마인드: 틀린 문제를 1·2·4·8·16·32일 간격으로 다시 출제 (홈 카드·탭 배지로 표시)
+- 적응형 난이도 Lv1~5: 최근 5문제 중 4개 이상 정답이면 레벨업, 3연속 오답이면 레벨다운
+- 실력 확인(배치 진단)으로 시작 지점 추천
+- 기록 백업/복원 (localStorage `mathapp.v1`)
+
+## 범위
+186개 개념, 중1~중3 + 고등(공통수학·수학Ⅰ·Ⅱ·확률과 통계·미적분·기하). 현황은 `COVERAGE.md`.
 
 ## 개발
-- 빌드 없음 (바닐라 JS ES modules). 로컬: `python3 -m http.server 8123`
-- 문제 검증: `node tools/test.mjs [--samples] [--only=id]`
-- 콘텐츠: `content/map.js`(전체 개념 지도), `content/m1-*.js` 등(구현)
+- `node tools/test.mjs` : 모든 문제 생성기 검증
+- `node tools/coverage.mjs` : 커버리지 점검표 생성
+- `tools/reg.sh <파일명>` : 콘텐츠 파일 등록
+- 서버 없이 정적 호스팅(GitHub Pages), 빌드 단계 없음

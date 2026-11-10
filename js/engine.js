@@ -87,8 +87,10 @@ export function finalize(raw, R, lv) {
 }
 
 export function pickGen(concept, lv, R) {
-  const ok = concept.gens.filter((g) => lv >= g.lv[0] && lv <= g.lv[1]);
-  return R.pick(ok.length ? ok : concept.gens);
+  // 해당 난이도 범위의 생성기, 없으면 가장 가까운 난이도의 생성기
+  const dist = (g) => (lv < g.lv[0] ? g.lv[0] - lv : lv > g.lv[1] ? lv - g.lv[1] : 0);
+  const best = Math.min(...concept.gens.map(dist));
+  return R.pick(concept.gens.filter((g) => dist(g) === best));
 }
 
 export function makeProblem(concept, seed, lv) {
