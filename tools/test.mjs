@@ -15,7 +15,7 @@ const only = (args.find((a) => a.startsWith('--only=')) || '').slice(7);
 let files = args.filter((a) => !a.startsWith('--'));
 if (!files.length) {
   const dir = path.join(here, '..', 'content');
-  files = fs.readdirSync(dir).filter((f) => /^(m|h|p|c|g)\d?-.*\.js$/.test(f)).map((f) => path.join(dir, f));
+  files = fs.readdirSync(dir).filter((f) => /^(m|h|p|c|g)\d?(-.*)?\.js$/.test(f)).map((f) => path.join(dir, f));
 }
 
 let errors = 0, probs = 0, gensN = 0, conceptsN = 0;
